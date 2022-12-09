@@ -1,0 +1,531 @@
+
+* {box-sizing: border-box;}
+
+/* fonts for the entire webpage fixed to Arial, Helvetica, sans-serif */
+
+body { 
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Bar styling for responsive design Anubhav Bhartiya */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Setting up the Body for the static NavBar Anubhav Bhartiya */
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+/* Setting up the Background Colour and sizing-spacing oof the layout of the navbar Anubhav Bhartiya */
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: dodgerblue;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+/* This Function sets up the Buttons which can be selected to navigate through Anubhav Bhartiya */
+
+.nav > .nav-btn {
+  display: none;
+}
+/* Links attached to the Nav Bar Buttons Anubhav Bhartiya */
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+/* Changes of the shade and colour once you hover the mouse over the button Anubhav Bhartiya */
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+/* Responsiveness followed by the Hamburger styling of the NavBar Anubhav Bhartiya */
+@media (max-width:700px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+    
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: dodgerblue;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    float: none;
+    border-bottom: 2px solid;
+    z-index: 100;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+    
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* Background Image & home page Styling */
+/* reference source : https://www.w3schools.com/howto/howto_css_hero_image.asp */
+/* background Image assigned covering max of 95% hight of the viewport with images aligned to center of the screen */ 
+
+.bg-image {
+  background-image: url("Visuals/bgimage.jpg");
+  height: 95vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* * * * * * Body Font Styling (contributed by all group members)* * * * */ 
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-text {
+  text-align: justify;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffffffc7;
+  font-size: 50px;
+  letter-spacing: 4px;
+  text-justify: inter-word;
+}
+h2 {
+  color: #21639e;
+  font-size: 30px;
+  letter-spacing: 5px;
+  padding: 20px;
+  text-align: center;
+  text-justify: inter-word;
+}
+
+h3 {
+  color: #ffffffc7;
+  font-size: 20px;
+  letter-spacing: 5px;
+  padding: 20px;
+  text-align: center;
+  text-justify: inter-word;
+}
+
+h4 {
+  color: #21639e;
+  font-size: 15px;
+  letter-spacing: 5px;
+  padding: 20px;
+  text-align: center;
+  text-justify: inter-word;
+}
+
+.p1 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d8d64f;
+  letter-spacing: 2px;
+}
+
+.p2 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5ee2e2;
+  letter-spacing: 2px;
+}
+
+.p3 {
+  font-size: 20px;
+  color: #c24c4c;
+  letter-spacing: 1px;
+}
+
+.p4 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d177c2;
+  letter-spacing: 1px;
+}
+
+/*trip 4 paragraph* Mingxuan Su*/
+.p5 {
+color: #000000;
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+padding: 20px;
+}
+
+/* Portfolio Image gallery row & Column boundary fixxing to keep it in line visually */
+/* reference source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_image_grid */
+/* modification done to row-column grids and instead of multiple options for layout */
+/* since images to be uploaded were limited, I chose just 2 columns */
+/* since the sizes of the images were not similar, to make it visually neater I used flexible wrapping vis ms-flex */
+
+.rowcard {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 2%;
+}
+.columncard {
+  -ms-flex: 50%;
+  flex: 50%;
+  padding: 0 4px;
+}
+.columncard img {
+  margin-top:8px;
+  vertical-align:middle;
+  width:100%;
+  opacity:0.5;
+}
+.columncard img:hover{
+  opacity:1;
+}
+
+.tab {
+  margin-bottom:1.0em;
+ }
+
+.footer {
+   background-color: #21639e;
+   color:black;
+   text-align:center;
+   min-height:10vh;
+   display:flex;
+   flex-direction:column;
+   justify-content:space-between;
+}
+
+/* styling for preparing cards which will be used as links to all the trip pages */
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition:0.3s;
+	width: 100%;
+}
+    
+.container {
+	padding: 2px 16px;
+  text-align: center;
+}
+
+/* Styling for Text blocks over background image */
+
+.trip1image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("Ladakh/L5.JPG");
+	height: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.trip2image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("Spiti/S2.jpg");
+	height: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.trip3image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("Kedarkantha/KK9.jpg");
+	height: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+/* change trip4 background image Mingxuan Su*/
+.trip4image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("BoisBlancIsland/BBI8.jpeg");
+	height: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-text {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+    letter-spacing: 3px;
+    padding: 5px;
+	color: white;
+}
+
+p.thick {
+	font-weight: bold;
+}
+
+/* Create the parallax scrolling effect Mingxuan Su*/
+/* designed by w3schools, Changes have been made*/
+.parallax {
+  /* The image used */
+  background-image: url("Visuals/bgimage.jpg");
+
+  /* Set a specific height */
+  min-height: 800px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* parallax text style Mingxuan Su*/
+.parallaxtext{
+  height:600px;
+  background-color:rgb(255, 255, 255);
+  font-size:36px;
+  text-align: justify;
+  padding: 20px;
+}
+
+/* itinerry table design for 4 trips Mingxuan Su*/
+/* reference source : https://www.w3schools.com/html/html_tables.asp Changes have been made */
+.trip {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 20px;
+}
+
+/*two colors for different rows Mingxuan Su*/
+.trip tr:nth-child(odd){background-color: #f2f2f2;}
+.trip tr:nth-child(even){background-color: #cfcfcf;}
+
+/*table style and alignment Mingxuan Su*/
+.trip td, #trip1 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/*table heading Mingxuan Su*/
+.trip th {
+  text-align: left;
+  background-color: #21639e;
+  color: white;
+  padding: 10px;
+}
+/* itinerry table end*/
+
+/* Trip highlight list for all 4 trips Mingxuan Su*/
+/* Modified based on w3schools*/
+ul {
+  list-style: circle;
+}
+
+/* responsive image gallery CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Created by Meet, modified by Mingxuan Su to align photos with the text */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Image slider CSS*/
+/* Image Carousel for a better and efficient stacking of images in a single frame Anubhav Bhartiya*/
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+
+/* resize ourtrip page Images, as suggested in class, remove style from html page and add them back in css Mingxuan Su */
+img {
+vertical-align: middle;
+max-width:100%;
+max-height:100%;
+}
+
+/* Slideshow container- Major box where all the images will be displayed Anubhav Bhartiya  */
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons to toggle through the images Anubhav Bhartiya*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right Anubhav Bhartiya */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color Anubhav Bhartiya */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* Video SCreen with controls to play and pause the video Anubhav Bhartiya */
+
+.video {
+  
+  text-align:center
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  width: 90%;
+}
+
+/* Responsiveness of the Video Frame Anubhav Bhartiya*/
+
+@media only screen and (min-width: 700px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
